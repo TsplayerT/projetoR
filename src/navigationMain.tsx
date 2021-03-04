@@ -4,19 +4,21 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { StyleSheet } from 'react-native';
 
-import { CampaignScreen } from './screen/campaign';
-import { InventoryScreen } from './screen/inventory';
-import { ChatScreen } from './screen/chat';
+import { LoginScreen } from './screen/main/login';
+import { CampaignScreen } from './screen/main/campaign';
+import { ProfileScreen } from './screen/main/profile';
+import { SettingsScreen } from './screen/main/settings';
 
 const Stack = createStackNavigator();
 
-export function Container() {
+export function MainContainer() {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="Campaign" mode="modal" headerMode="screen" screenOptions={{headerStyle: Styles.header, headerTintColor: 'white'}} >
+            <Stack.Navigator initialRouteName="Login" mode="modal" headerMode="screen" screenOptions={{headerStyle: Styles.header, headerTintColor: 'white'}} >
+                <Stack.Screen name="Login" component={LoginScreen} />
                 <Stack.Screen name="Campaign" component={CampaignScreen} />
-                <Stack.Screen name="Home" component={InventoryScreen} />
-                <Stack.Screen name="Chat" component={ChatScreen} />
+                <Stack.Screen name="Profile" component={ProfileScreen} />
+                <Stack.Screen name="Settings" component={SettingsScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     );

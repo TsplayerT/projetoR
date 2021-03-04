@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { Styles } from '../navigation';
+import { Styles } from '../../navigationGameCharacter';
 
 export function CampaignScreen() {
   return (
