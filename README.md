@@ -1,17 +1,22 @@
 ### projeto R  
   
-> nenhuma descrição inserida no momento  
+> A proposta desse projeto é simplificar e abranger todas as formas de jogar [RPG](https://pt.wikipedia.org/wiki/Role-playing_game) além de facilitar a criação de sistemas, campanhas, fichas e quaisquer conteúdo imersivo nesse universo de interpretação de papéis e narrações históricas  
   
 ---  
   
 ### Padrão de nomenclaturas   
   
-Arquivos, classes, funções e variáveis devem seguintes as regras abaixo:  
-- Possuir nome simples
-- Não deve conter preposições
-- Estar no formato [lowerCamelCase](https://pt.wikipedia.org/wiki/CamelCase)
-- Escritos na língua inglesa (en-US)
-- Ser único
+**Todas as definições de nomes** devem seguir as regras abaixo:  
+- Possuir nome simples  
+- Não deve conter preposições  
+- Escritos na língua inglesa (en-US)  
+- Ser único  
+  
+**Classes**, **Enum**, **Interface**, **funções** possuem essas regras adicionais abaixo:
+- Estar no formato [UpperCamelCase](https://pt.wikipedia.org/wiki/CamelCase)  
+  
+**Arquivos**, **parâmetros** e **variáveis** possuem essas regras adicionais abaixo:  
+- Estar no formato [lowerCamelCase](https://pt.wikipedia.org/wiki/CamelCase)  
   
 ---  
   
