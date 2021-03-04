@@ -4,7 +4,24 @@
   
 ---  
   
-### Padrão de semântica de mensagens do controle de versão _(commit)_  
+### Padrão de nomenclaturas   
+  
+Arquivos devem seguintes as regras abaixo:  
+- Possuir nome simples
+- Não deve conter preposições
+- Estar no formato [lowerCamelCase](https://pt.wikipedia.org/wiki/CamelCase)
+- Escritos na língua inglesa (en-US)
+- Ser único
+  
+---  
+  
+### Formalização de comentários    
+  
+> devem ser escritos no idioma portguês (pt-BR)
+  
+---  
+  
+### Semântica de mensagens do controle de versão _(commit)_  
 
 Formato: `<tipo> (<escopo>): <assunto>`
 
