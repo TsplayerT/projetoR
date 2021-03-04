@@ -4,7 +4,7 @@
   
 ---  
   
-### Padrão na semântica mensagens do controle de versão _(commit)_  
+### Padrão de semântica de mensagens do controle de versão _(commit)_  
 
 Formato: `<tipo> (<escopo>): <assunto>`
 
