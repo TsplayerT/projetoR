@@ -6,7 +6,7 @@
   
 ### Padrão de nomenclaturas   
   
-Arquivos devem seguintes as regras abaixo:  
+Arquivos, classes, funções e variáveis devem seguintes as regras abaixo:  
 - Possuir nome simples
 - Não deve conter preposições
 - Estar no formato [lowerCamelCase](https://pt.wikipedia.org/wiki/CamelCase)
