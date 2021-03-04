@@ -22,7 +22,7 @@
   
 ### Formalização de comentários    
   
-> devem ser escritos no idioma portguês (pt-BR)
+Devem ser escritos no idioma portguês (pt-BR)
   
 ---  
   
