@@ -4,6 +4,39 @@
   
 ---  
   
+### Norma de identação e organização de linhas  
+  
+- Importação  
+  
+| Resultado | Forma |
+| --- | --- |
+| ❌ | `import {View, Text,} from 'react-native'` |
+| ✔️ | `import { View, Text } from 'react-native';` |
+  
+Se atentar com os espaçamento, uso de vírgulas *(,)* e ponto e vírgula *(;)*  
+  
+- Identação  
+  
+| Resultado | Forma |
+| --- | --- |
+| ❌ | ![identacaoErrada](https://i.imgur.com/1aU9IC5.png) |
+| ✔️ | ![identacaoCerta](https://i.imgur.com/nR0Ql7L.png) |
+  
+Observe os espaçamentos, depois do cabeçalho, entre a propriedade e o valor, também antes da propriedade 
+  
+---  
+  
+- Quebra de linhas  
+  
+| Resultado | Forma |
+| --- | --- |
+| ❌ | ![quebraLinhaErrada](https://i.imgur.com/ABjBRa3.png) |
+| ✔️ | ![quebraLinhaCerta](https://i.imgur.com/ocVlQU8.png) |
+  
+É recomendado não fazer quebras de linhas para não poluir a tela e diminuir o uso de linhas  
+  
+---  
+  
 ### Padrão de nomenclaturas   
   
 **Todas as definições de nomes** devem seguir as regras abaixo:  
