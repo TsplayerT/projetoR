@@ -10,42 +10,42 @@ import { ChatServerScreen } from './screen/game/master/chatServer';
 
 const Stack = createStackNavigator();
 
-export function MasterGameContainer() {
-    return (
-        <NavigationContainer>
-            <Stack.Navigator initialRouteName="Theater" mode="modal" headerMode="screen" screenOptions={{headerStyle: Styles.header, headerTintColor: 'white'}} >
-                <Stack.Screen name="Theater" component={TheaterScreen} />
-                <Stack.Screen name="Arsenal" component={ArsenalScreen} />
-                <Stack.Screen name="Chat" component={ChatServerScreen} />
-            </Stack.Navigator>
-        </NavigationContainer>
-    );
-}
+export const MasterGameContainer: React.FC = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Theater" mode="modal" headerMode="screen" screenOptions={{headerStyle: Styles.header, headerTintColor: 'white'}} >
+        <Stack.Screen name="Theater" component={TheaterScreen} />
+        <Stack.Screen name="Arsenal" component={ArsenalScreen} />
+        <Stack.Screen name="Chat" component={ChatServerScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
 
 export const Styles = StyleSheet.create({
-    text: {
-        color: 'black',
-        fontWeight: '400',
-        fontSize: 20,
-        letterSpacing: 2
-    },
-    header: {
-        backgroundColor: 'rgb(30, 30, 30)'
-    },
-    screen: {
-        flex: 1,
-        backgroundColor: 'rgb(60, 60, 60)',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    cinzaClaro: {
-        backgroundColor: 'rgb(90, 90, 90)'
-    },
-    cinzaMedio: {
-        backgroundColor: 'rgb(60, 60, 60)'
-    },
-    cinzaEscuro: {
-        backgroundColor: 'rgb(30, 30, 30)'
-    }
+  text: {
+    color: 'black',
+    fontWeight: '400',
+    fontSize: 20,
+    letterSpacing: 2
+  },
+  header: {
+    backgroundColor: 'rgb(30, 30, 30)'
+  },
+  screen: {
+    flex: 1,
+    backgroundColor: 'rgb(60, 60, 60)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  cinzaClaro: {
+    backgroundColor: 'rgb(90, 90, 90)'
+  },
+  cinzaMedio: {
+    backgroundColor: 'rgb(60, 60, 60)'
+  },
+  cinzaEscuro: {
+    backgroundColor: 'rgb(30, 30, 30)'
+  }
 });
   
