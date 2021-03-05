@@ -1,12 +1,11 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+import { Styles } from '../../styles';
 
-import { Styles } from '../../../styles';
-
-export function SceneScreen() {
+export function HomeScreen() {
     return (
         <View style={Styles.screen} >
-            <Text style={Styles.text} >Scene Screen</Text>
+            <Text style={Styles.text} >Home Screen</Text>
         </View>
     );
 }
