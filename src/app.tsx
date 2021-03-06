@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { StatusBar } from 'expo-status-bar'
-import { MenuContainer } from './navigator/menu'
+import SwitchNavigator, { navigatorType } from './components/SwitchNavigator'
 import registerRootComponent from 'expo/build/launch/registerRootComponent';
 
+const context = React.createContext({});
+
 export default function App() {
+    const [type, setType] = useState<navigatorType>('player');
+
+    useEffect(() => {
+        setType('dm');
+    }, []);
+
     return (
         <>
             <StatusBar style="auto" />
-            <MenuContainer />
+            <SwitchNavigator type={type} />
         </>
     )
 }

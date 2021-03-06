@@ -6,7 +6,7 @@ import { StackHeaderProps } from '@react-navigation/stack';
 export function IndexScreen({ navigation }: StackHeaderProps) {
     return (
         <View style={Styles.screen} >
-            <Button title="Login" color={ColorDarkGray} onPress={() => navigation.popToTop()}></Button>
+            <Button title="Login" color={ColorDarkGray} onPress={() => { }}></Button>
         </View>
     );
 }

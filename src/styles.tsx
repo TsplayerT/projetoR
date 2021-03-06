@@ -18,5 +18,20 @@ export const Styles = StyleSheet.create({
         backgroundColor: ColorLightGray,
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    input: {
+        borderColor: 'gray',
+        borderWidth: 0,
+        outline: 0,
+        // outline: 0,
+        // width: 250,
+        // borderRadius: 5,
+        // borderColor: "#FFF",
+        backgroundColor: "#FFF",
+        // paddingLeft: 10,
+        // paddingTop: 5,
+        // paddingBottom: 5,
+        // marginTop: 10,
+        // marginBottom: 10,
     }
 });
