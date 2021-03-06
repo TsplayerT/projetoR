@@ -1,12 +1,15 @@
 import React from 'react';
-import { View, Button } from 'react-native';
-import { Styles, ColorDarkGray } from '../../styles';
-import { StackHeaderProps } from '@react-navigation/stack';
+import { Text, View } from 'react-native';
+import { Styles } from '../../styles';
 
-export function IndexScreen({ navigation }: StackHeaderProps) {
-    return (
-        <View style={Styles.screen} >
-            <Button title="Login" color={ColorDarkGray} onPress={() => { }}></Button>
-        </View>
-    );
-}
+const IndexScreen: React.FC = () => (
+  <View style={Styles.screen} >
+    {/* 
+      A tag button precisa do parametro onPress obrigatoriamente
+      <Button title="Login" color={ColorDarkGray} ></Button> 
+    */}
+    <Text>IndexScreen works</Text>
+  </View>
+);
+
+export default IndexScreen;
