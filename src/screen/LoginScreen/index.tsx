@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { Text, View } from 'react-native';
 import styled from 'styled-components';
+import { StackScreenProps } from '@react-navigation/stack';
 
 // futuramente realziar estilização por meio de componentes
 const TextField = styled.input`
@@ -29,10 +30,18 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: calc(100vh - 64px);
+  height: 100vh;
 `;
 
-export const LoginScreen: React.FC = () => {
+type RootStackParamList = {
+  Home: undefined;
+  Profile: { userId: string };
+  Feed: { sort: 'latest' | 'top' } | undefined;
+};
+
+type Props = StackScreenProps<RootStackParamList, 'Profile'>;
+
+export const LoginScreen: React.FC<Props> = ({ navigation }: Props) => {
   const usernameRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
 
@@ -43,7 +52,7 @@ export const LoginScreen: React.FC = () => {
 
     // futuramente trocar etapa de validação para outro modulo
     if (username?.value === 'admin' && password?.value === 'admin') {
-      alert('logado com sucesso');
+      navigation.navigate('Home');
     } else {
       alert('acesso negado');
     }
