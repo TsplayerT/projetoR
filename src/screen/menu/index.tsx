@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import { Styles } from '../../styles';
 
-const IndexScreen: React.FC = () => (
+export const IndexScreen: React.FC = () => (
   <View style={Styles.screen} >
     {/* 
       A tag button precisa do parametro onPress obrigatoriamente
@@ -11,5 +11,3 @@ const IndexScreen: React.FC = () => (
     <Text>IndexScreen works</Text>
   </View>
 );
-
-export default IndexScreen;

@@ -3,10 +3,8 @@ import { View, Text } from 'react-native';
 
 import { Styles } from '../../../styles';
 
-const InventoryScreen: React.FC = () => (
+export const InventoryScreen: React.FC = () => (
   <View style={Styles.screen} >
     <Text style={Styles.text} >Home Screen</Text>
   </View>
 );
-
-export default InventoryScreen;
