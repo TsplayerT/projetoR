@@ -1,8 +1,9 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
-import CampaignScreen from '../../screen/main/campaign';
-import HomeScreen from '../../screen/main/home';
+import { CampaignScreen } from '../../screen/main/campaign';
+import { HomeScreen } from '../../screen/main/home';
+import { LoginScreen } from '../../screen/LoginScreen';
 
 export type navigatorType = 'player' | 'dm';
 
@@ -24,7 +25,7 @@ const SwitchNavigator: React.FC<SwitchNavigatorPros> = (props: SwitchNavigatorPr
   const dmNavigator = () => (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Campaign" >
-        <Stack.Screen name="Campaign" component={CampaignScreen} />
+        <Stack.Screen name="LoginScreen" component={LoginScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
