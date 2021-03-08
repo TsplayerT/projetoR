@@ -3,6 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import SwitchNavigator, { navigatorType } from './components/SwitchNavigator';
 import registerRootComponent from 'expo/build/launch/registerRootComponent';
 
+// hello hello baby
 const App: React.FC = () => {
   const [type, setType] = useState<navigatorType>('player');
 
