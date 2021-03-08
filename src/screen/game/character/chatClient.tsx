@@ -1,10 +1,9 @@
 import React from 'react';
-import { View, Text } from 'react-native';
 
-import { Styles } from '../../../styles';
+import { Screen, MenuTitle } from '../../../styles/basics';
 
 export const ChatClientScreen: React.FC = () => (
-  <View style={Styles.screen} >
-    <Text style={Styles.text} >Chat Client Screen</Text>
-  </View>
+  <Screen>
+    <MenuTitle >Chat Client Screen</MenuTitle>
+  </Screen>
 );

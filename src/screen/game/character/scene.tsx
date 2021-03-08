@@ -1,10 +1,9 @@
 import React from 'react';
-import { View, Text } from 'react-native';
 
-import { Styles } from '../../../styles';
+import { Screen, MenuTitle } from '../../../styles/basics';
 
 export const SceneScreen: React.FC = () => (
-  <View style={Styles.screen} >
-    <Text style={Styles.text} >Scene Screen</Text>
-  </View>
+  <Screen>
+    <MenuTitle>Scene Screen</MenuTitle>
+  </Screen>
 );
