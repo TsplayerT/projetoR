@@ -64,16 +64,31 @@ export const MenuTitle = styled.Text`
   letter-spacing: 2;
 `;
 
+// export const Text = styled.Text`
+//   margin-bottom: 10px;
+// `;
+// export const TextClickable = styled.Text`
+//   color: white;
+//   margin-top: 30px;
+//   border: 1px solid black;
+
+//   :hover {
+//     transform: scale(1.15);
+//     cursor: pointer;
+//     color: lightgray;
+//   };
+// `;
+
 export const Text = styled.Text`
   margin-bottom: 10px;
 `;
 export const TextClickable = styled.Text`
   color: white;
   margin-top: 30px;
-  //border: 1px solid black;
+  border: 1px solid black;
 
   :hover {
-    //transform: scale(1.15);
+    transform: scale(1.15);
     cursor: pointer;
     color: lightgray;
   };
