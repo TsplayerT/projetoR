@@ -1,12 +1,14 @@
 import React from 'react';
-import { View, Text, TextInput } from 'react-native';
-import { Styles } from '../../styles';
+
+import { Screen, Text, Input, MenuItem } from '../../styles/basics';
+import { Navigate } from '../../components/SwitchNavigator';
 
 export const LoginScreen: React.FC = () => (
-  <View style={Styles.screen} >
+  <Screen>
     <Text>Usuário</Text>
-    <TextInput placeholder="joão" style={Styles.input} caretHidden={true} />
+    <Input placeholder="joão" />
     <Text>Senha</Text>
-    <TextInput placeholder="123" style={Styles.input} />
-  </View>
+    <Input placeholder="123" />
+    <MenuItem title="Conectar" onPress={() => Navigate({containerName: 'Main', screenName: 'Home'})}/>
+  </Screen>
 );
