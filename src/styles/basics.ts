@@ -10,9 +10,50 @@ export const Screen = styled.View`
   justify-content: center;
   background-color: ${ColorLightGray};
 `;
+/*
+const ScreenScroller = styled.ScrollView`
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  background-color: ${ColorLightGray};
+`;
+export const Screen = () => (
+  <ScreenScroller>
+    <ScreenBase>
+    </ScreenBase>
+  </ScreenScroller>
+);
+*/
 
+export const Line = styled.View`
+  padding: 10px;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const Area = styled.View`
+  padding: 40px;
+  height: 450px;
+  width: 300px;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: ${ColorMediumGray};
+`;
+
+export const Card = styled.View`
+  padding: 20px;
+  height: 150px;
+  width: 300px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  background-color: ${ColorMediumGray};
+`;
+
+//não está funcionando direito
 export const MenuItem = styled.Button`
-  background-color: ${ColorDarkGray};
+  margin-bottom: 10px;
 `;
 
 export const MenuTitle = styled.Text`
@@ -23,9 +64,23 @@ export const MenuTitle = styled.Text`
   letter-spacing: 2;
 `;
 
-export const Text = styled.Text``;
+export const Text = styled.Text`
+  margin-bottom: 10px;
+`;
+export const TextClickable = styled.Text`
+  color: white;
+  margin-top: 30px;
+  //border: 1px solid black;
+
+  :hover {
+    //transform: scale(1.15);
+    cursor: pointer;
+    color: lightgray;
+  };
+`;
 
 export const Input = styled.TextInput`
-  margin-bottom: 10px;
+  padding: 5px 15px 5px 15px;
+  margin-bottom: 20px;
   background-color: #FFF;
 `;

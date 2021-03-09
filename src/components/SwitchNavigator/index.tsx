@@ -5,6 +5,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import { NavigationContainer, NavigationContainerRef } from '@react-navigation/native';
 
 import { LoginScreen } from '../../screen/menu/login';
+import { NewAccountScreen } from '../../screen/menu/newAccount';
 import { IndexScreen } from '../../screen/menu/index';
 import { HomeScreen } from '../../screen/main/home';
 import { CampaignScreen } from '../../screen/main/campaign';
@@ -38,6 +39,7 @@ const MenuContainer: React.FC = () => (
   <MenuStack.Navigator initialRouteName="Index" headerMode="none" >
     <MenuStack.Screen name="Index" component={IndexScreen} />
     <MenuStack.Screen name="Login" component={LoginScreen} />
+    <MenuStack.Screen name="NewAccount" component={NewAccountScreen} />
   </MenuStack.Navigator>
 );
 
