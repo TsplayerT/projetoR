@@ -1,6 +1,6 @@
 import React, { ReactElement, useState } from 'react';
 
-import { LineSimple, Box, Text } from '../../styles/basics';
+import { LineSimple, Box, Text } from '../styles/basics';
 
 type Param = {
   title: string;
@@ -8,7 +8,7 @@ type Param = {
   key?: number;
 };
 
-export const CheckBox: (param: Param) => ReactElement = (param: Param) => {
+const Index: (param: Param) => ReactElement = (param: Param) => {
   const [checked, setChecked] = useState(param.value ?? false);
 
   return (
@@ -18,3 +18,5 @@ export const CheckBox: (param: Param) => ReactElement = (param: Param) => {
     </LineSimple>    
   );
 };
+
+export default Index;

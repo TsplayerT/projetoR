@@ -1,4 +1,4 @@
-import { Campaign } from '../types/index';
+import { Campaign } from '../../types';
 
 export const CampaignsList: (Campaign[]) = [
   {

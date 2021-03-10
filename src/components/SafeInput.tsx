@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 
 import { View, Text } from 'react-native';
-import { Line, SafeInputButton, Input } from '../../styles/basics';
+import { Line, SafeInputButton, Input } from '../styles/basics';
 
 type Param = {
   title: string;
@@ -10,7 +10,7 @@ type Param = {
   safe?: boolean;
 };
 
-export const SafeInput: (param: Param) => ReactElement = (param: Param) => (
+const Index: (param: Param) => ReactElement = (param: Param) => (
   <View key={param.key} >
     <Text>{param.title}</Text>
     <Line>
@@ -21,3 +21,5 @@ export const SafeInput: (param: Param) => ReactElement = (param: Param) => (
     </Line>    
   </View>
 );
+
+export default Index;

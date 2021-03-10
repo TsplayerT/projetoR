@@ -4,19 +4,19 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { NavigationContainer, NavigationContainerRef } from '@react-navigation/native';
 
-import { LoginScreen } from '../../screen/menu/login';
-import { NewAccountScreen } from '../../screen/menu/newAccount';
-import { IndexScreen } from '../../screen/menu/index';
-import { HomeScreen } from '../../screen/main/home';
-import { CampaignScreen } from '../../screen/main/campaign';
-import { ProfileScreen } from '../../screen/main/profile';
-import { SettingsScreen } from '../../screen/main/settings';
-import { TheaterScreen } from '../../screen/game/master/theater';
-import { ArsenalScreen } from '../../screen/game/master/arsenal';
-import { ChatServerScreen } from '../../screen/game/master/chatServer';
-import { SceneScreen } from '../../screen/game/character/scene';
-import { InventoryScreen } from '../../screen/game/character/inventory';
-import { ChatClientScreen } from '../../screen/game/character/chatClient';
+import { LoginScreen } from '../screen/menu/login';
+import { NewAccountScreen } from '../screen/menu/newAccount';
+import { IndexScreen } from '../screen/menu/index';
+import { HomeScreen } from '../screen/main/home';
+import { CampaignScreen } from '../screen/main/campaign';
+import { ProfileScreen } from '../screen/main/profile';
+import { SettingsScreen } from '../screen/main/settings';
+import { TheaterScreen } from '../screen/game/master/theater';
+import { ArsenalScreen } from '../screen/game/master/arsenal';
+import { ChatServerScreen } from '../screen/game/master/chatServer';
+import { SceneScreen } from '../screen/game/character/scene';
+import { InventoryScreen } from '../screen/game/character/inventory';
+import { ChatClientScreen } from '../screen/game/character/chatClient';
 
 const ContainerStack = createStackNavigator();
 const MenuStack = createStackNavigator();
@@ -68,7 +68,7 @@ const GameMasterContainer: React.FC = () => (
   </GamerMasterTab.Navigator>
 );
 
-export const Container: React.FC = () => (
+const Index: React.FC = () => (
   <NavigationContainer ref={navigationReference} >
     <ContainerStack.Navigator initialRouteName="Menu" headerMode='none' >
       <ContainerStack.Screen name="Menu" component={MenuContainer} />
@@ -78,3 +78,5 @@ export const Container: React.FC = () => (
     </ContainerStack.Navigator>
   </NavigationContainer>
 );
+
+export default Index;

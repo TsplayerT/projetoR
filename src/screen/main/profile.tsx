@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components/native';
 
-import { Screen } from '../../components/Screen/index';
+import Screen from '../../components/Screen';
+import StarsArea from '../../components/StarsCard';
 import { ColorMediumGray, ColorDarkGray, Text } from '../../styles/basics';
-import { StarsArea } from '../../components/StarsCard/index';
 
 const AreaBase = styled.View`
   width: 100%;

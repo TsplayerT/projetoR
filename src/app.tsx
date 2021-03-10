@@ -2,13 +2,16 @@ import 'react-native-gesture-handler';
 import registerRootComponent from 'expo/build/launch/registerRootComponent';
 
 import React  from 'react';
+import { Provider } from './api/sharer';
 import { StatusBar } from 'expo-status-bar';
-import { Container } from '../src/components/SwitchNavigator';
+import Container from './components/SwitchNavigator';
 
 export const App: React.FC = () => (
   <>
-    <StatusBar style="dark" />
-    <Container/>
+    <Provider>
+      <StatusBar style="dark" />
+      <Container/>
+    </Provider>
   </>
 );
 

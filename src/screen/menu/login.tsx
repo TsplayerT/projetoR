@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Screen } from '../../components/Screen/index';
+import Screen from '../../components/Screen';
 import { Text, TextClickable, Input, MenuItem, Area, MenuTitle, Line } from '../../styles/basics';
 import { Navigate } from '../../components/SwitchNavigator';
 
