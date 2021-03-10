@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Screen, MenuTitle, MenuItem, Text } from '../../styles/basics';
+import { Screen } from '../../components/Screen/index';
+import { MenuTitle, MenuItem, Text } from '../../styles/basics';
 import { Navigate } from '../../components/SwitchNavigator/index';
 
 export const HomeScreen: React.FC = () => (

@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Screen, MenuTitle } from '../../../styles/basics';
+import { Screen } from '../../../components/Screen/index';
+import { MenuTitle } from '../../../styles/basics';
 
 export const ChatClientScreen: React.FC = () => (
   <Screen>

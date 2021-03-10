@@ -4,32 +4,28 @@ export const ColorLightGray = 'rgb(120, 120, 120)';
 export const ColorMediumGray = 'rgb(80, 80, 80)';
 export const ColorDarkGray = 'rgb(40, 40, 40)';
 
-export const Screen = styled.View`
+export const ScreenScroller = styled.ScrollView`
   flex: 1;
+  flex-grow: 1;
+  background-color: ${ColorDarkGray};
+`;
+export const ScreenArea = styled.View`
   align-items: center;
   justify-content: center;
   background-color: ${ColorLightGray};
 `;
-/*
-const ScreenScroller = styled.ScrollView`
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  background-color: ${ColorLightGray};
-`;
-export const Screen = () => (
-  <ScreenScroller>
-    <ScreenBase>
-    </ScreenBase>
-  </ScreenScroller>
-);
-*/
 
 export const Line = styled.View`
   padding: 10px;
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
+`;
+
+export const LineSimple = styled.View`
+  padding: 10px;
+  width: 100%;
+  flex-direction: row;
 `;
 
 export const Area = styled.View`
@@ -64,24 +60,10 @@ export const MenuTitle = styled.Text`
   letter-spacing: 2;
 `;
 
-// export const Text = styled.Text`
-//   margin-bottom: 10px;
-// `;
-// export const TextClickable = styled.Text`
-//   color: white;
-//   margin-top: 30px;
-//   border: 1px solid black;
-
-//   :hover {
-//     transform: scale(1.15);
-//     cursor: pointer;
-//     color: lightgray;
-//   };
-// `;
-
 export const Text = styled.Text`
   margin-bottom: 10px;
 `;
+
 export const TextClickable = styled.Text`
   color: white;
   margin-top: 30px;
@@ -98,4 +80,21 @@ export const Input = styled.TextInput`
   padding: 5px 15px 5px 15px;
   margin-bottom: 20px;
   background-color: #FFF;
+`;
+
+export const SafeInputButton = styled.View`
+  background-color: ${ColorMediumGray}
+`;
+
+export const Box = styled.View`
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  background-color: ${ColorMediumGray};
+
+  :hover {
+    cursor: pointer;
+  }
 `;

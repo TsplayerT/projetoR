@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Screen, Text, TextClickable, Input, MenuItem, Area, MenuTitle, Line } from '../../styles/basics';
+import { Screen } from '../../components/Screen/index';
+import { Text, TextClickable, Input, MenuItem, Area, MenuTitle, Line } from '../../styles/basics';
 import { Navigate } from '../../components/SwitchNavigator';
 
 export const LoginScreen: React.FC = () => (
