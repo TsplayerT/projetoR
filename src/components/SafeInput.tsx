@@ -14,7 +14,7 @@ const Index: (param: Param) => ReactElement = (param: Param) => (
   <View key={param.key} >
     <Text>{param.title}</Text>
     <Line>
-      <Input/>
+      <Input value={param.value} />
       <SafeInputButton>
         <Text>{param.safe !== true ? 'Editar' : 'Salvar'}</Text>
       </SafeInputButton>

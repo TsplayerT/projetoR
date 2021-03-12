@@ -56,8 +56,8 @@ export const MenuTitle = styled.Text`
   margin-bottom: 50px;
   color: black;
   font-weight: 400;
-  font-size: 20;
-  letter-spacing: 2;
+  font-size: 20px;
+  letter-spacing: 2px;
 `;
 
 export const Text = styled.Text`

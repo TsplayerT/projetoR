@@ -25,14 +25,16 @@ const GameCharacterTab = createMaterialTopTabNavigator();
 const GamerMasterTab = createMaterialTopTabNavigator();
 const navigationReference: RefObject<NavigationContainerRef> = React.createRef();
 
-type Param = {
+export type NavigateParam = {
   containerName: string,
   screenName: string
 };
-export const Navigate: (param: Param) => void | undefined = (param: Param) => {
-  navigationReference.current?.navigate(param.containerName, {
-    screen: param.screenName
-  });
+export const Navigate: (param: NavigateParam | undefined) => void | undefined = (param: NavigateParam | undefined) => {
+  if(param){
+    navigationReference.current?.navigate(param.containerName, {
+      screen: param.screenName
+    });
+  }
 };
 
 const MenuContainer: React.FC = () => (

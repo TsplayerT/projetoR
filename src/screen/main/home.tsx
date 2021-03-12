@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
+import { Context } from '../../api/sharer';
 import Screen from '../../components/Screen';
 import { MenuTitle, MenuItem, Text } from '../../styles/basics';
-import { Navigate } from '../../components/SwitchNavigator';
 
-export const HomeScreen: React.FC = () => (
-  <Screen>
-    <MenuTitle>Home Screen</MenuTitle>
-    <Text>Atalhos provisórios para as telas</Text>
-    <MenuItem title="Campaign" onPress={() => Navigate({containerName: 'Main', screenName: 'Campaign'})}/>
-    <MenuItem title="Profile" onPress={() => Navigate({containerName: 'Main', screenName: 'Profile'})}/>
-    <MenuItem title="Settings" onPress={() => Navigate({containerName: 'Main', screenName: 'Settings'})}/>
-  </Screen>
-);
+export const HomeScreen: React.FC = () => {
+  const context = useContext(Context);
+  
+  return (
+    <Screen>
+      <MenuTitle>Home Screen</MenuTitle>
+      <Text>Atalhos provisórios para as telas</Text>
+      <MenuItem title="Campaign" onPress={() => context.navigate = { containerName: 'Main', screenName: 'Campaign' }}/>
+      <MenuItem title="Profile" onPress={() => context.navigate = { containerName: 'Main', screenName: 'Profile' }}/>
+      <MenuItem title="Settings" onPress={() => context.navigate = { containerName: 'Main', screenName: 'Settings' }}/>
+    </Screen>
+  );
+};

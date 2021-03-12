@@ -33,21 +33,21 @@ type Param = {
 };
 
 const Index: (param: Param) => ReactElement = (param: Param) => {
-  const s = [0, 0, 0, 0, 0];
-  const floor = Math.floor(param.value ?? 0);
-  const left = param.value ?? 0 - floor;
+  const starArray = [0, 0, 0, 0, 0];
+  const valueInteger = Math.floor(param.value ?? 0);
+  const valueDecimal = param.value ?? 0 - valueInteger;
 
-  for(let i = 0; i < floor; i++) {
-    s[i] = 2;
+  for (let i = 0; i < valueInteger; i++) {
+    starArray[i] = 2;
   }
   
-  if(left > 0) {
-    s[floor] = 1;
+  if (valueDecimal > 0) {
+    starArray[valueInteger] = 1;
   }
 
   return (
     <Area>
-      {s.map((item, key)=> (
+      {starArray.map((item, key)=> (
         <StarView key={key}>
           {item === 0 && <StarEmpty />}
           {item === 1 && <StarHalf  />}
