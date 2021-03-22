@@ -7,16 +7,20 @@ back-end/.vs/*
 back-end/.vscode/*
 
 front-end/.expo/*
-front-end/.expo-shared/*
 front-end/node_modules/**/*
 front-end/npm-debug.*
+front-end/.eslintcache
 front-end/*.jks
 front-end/*.p8
 front-end/*.p12
 front-end/*.key
 front-end/*.mobileprovision
 front-end/*.orig.*
-
-# macOS
-front-end/.DS_Store
-front-end/.eslintcache
+/front-end/assets/icon.png
+/front-end/assets/splash.png
+/front-end/assets/adaptive-icon.png
+/front-end/assets/favicon.png
+/front-end/assets/adaptive-icon.png
+/front-end/assets/favicon.png
+/front-end/assets/icon.png
+/front-end/assets/splash.png
