@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 
 import { Context } from '../../api/sharer';
-import Screen from '../../components/Screen';
+import Screen from '../../components/screen';
 import { MenuTitle, MenuItem, Text } from '../../styles/basics';
 
 export const HomeScreen: React.FC = () => {

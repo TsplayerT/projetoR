@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Screen from '../../components/Screen';
+import Screen from '../../components/screen';
 import { MenuTitle } from '../../styles/basics';
 import { CampaignsList } from '../../api/data/campaign';
-import CampaignCardItem from '../../components/CampaignCardItem';
+import CampaignCardItem from '../../components/campaignCardItem';
 
 export const CampaignScreen: React.FC = () => (
   <Screen>

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 
 import { Context } from '../../api/sharer';
-import Screen from '../../components/Screen';
+import Screen from '../../components/screen';
 import { Text, TextClickable, Input, MenuItem, Area, MenuTitle, Line } from '../../styles/basics';
 
 export const LoginScreen: React.FC = () => {

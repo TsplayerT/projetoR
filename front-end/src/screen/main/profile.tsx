@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/native';
 
-import Screen from '../../components/Screen';
-import StarsArea from '../../components/Stars';
+import Screen from '../../components/screen';
+import StarsArea from '../../components/stars';
 import { ColorMediumGray, ColorDarkGray, Text } from '../../styles/basics';
 
 const AreaBase = styled.View`

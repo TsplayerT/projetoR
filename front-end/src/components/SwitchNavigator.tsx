@@ -6,7 +6,7 @@ import { NavigationContainer, NavigationContainerRef } from '@react-navigation/n
 
 import { LoginScreen } from '../screen/menu/login';
 import { NewAccountScreen } from '../screen/menu/newAccount';
-import { IndexScreen } from '../screen/menu/index';
+import { IndexScreen } from '../screen/menu';
 import { HomeScreen } from '../screen/main/home';
 import { CampaignScreen } from '../screen/main/campaign';
 import { ProfileScreen } from '../screen/main/profile';

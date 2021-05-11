@@ -1,7 +1,7 @@
 import React, { createContext, ReactElement, ReactNode, useEffect } from 'react';
 import { userMaster } from './data/userConnected';
 import { User } from '../types';
-import { Navigate, NavigateParam } from '../components/SwitchNavigator';
+import { Navigate, NavigateParam } from '../components/switchNavigator';
 
 type Param = {
   children: ReactNode;

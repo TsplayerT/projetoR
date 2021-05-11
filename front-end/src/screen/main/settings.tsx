@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 
-import SafeInput from '../../components/SafeInput';
-import CheckBox from '../../components/CheckBox';
-import Screen from '../../components/Screen';
+import SafeInput from '../../components/safeInput';
+import CheckBox from '../../components/checkBox';
+import Screen from '../../components/screen';
 import { Context } from '../../api/sharer';
 
 export const SettingsScreen: React.FC = () => {
