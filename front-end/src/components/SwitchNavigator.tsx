@@ -1,4 +1,4 @@
-import React, { RefObject }  from 'react';
+import React, { RefObject, createRef }  from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
@@ -23,13 +23,13 @@ const MenuStack = createStackNavigator();
 const MainDrawer = createDrawerNavigator();
 const GameCharacterTab = createMaterialTopTabNavigator();
 const GamerMasterTab = createMaterialTopTabNavigator();
-const navigationReference: RefObject<NavigationContainerRef> = React.createRef();
+const navigationReference: RefObject<NavigationContainerRef> = createRef();
 
 export type NavigateParam = {
   containerName: string,
   screenName: string
 };
-export const Navigate: (param: NavigateParam | undefined) => void | undefined = (param: NavigateParam | undefined) => {
+export const Navigate: (param: NavigateParam) => void = (param: NavigateParam) => {
   if(param){
     navigationReference.current?.navigate(param.containerName, {
       screen: param.screenName

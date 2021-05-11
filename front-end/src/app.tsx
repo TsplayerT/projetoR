@@ -7,12 +7,10 @@ import { StatusBar } from 'expo-status-bar';
 import Container from './components/switchNavigator';
 
 export const App: React.FC = () => (
-  <>
-    <Provider>
-      <StatusBar style="dark" />
-      <Container/>
-    </Provider>
-  </>
+  <Provider>
+    <StatusBar style="dark" />
+    <Container/>
+  </Provider>
 );
 
 registerRootComponent(App);

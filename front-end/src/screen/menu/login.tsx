@@ -5,7 +5,7 @@ import Screen from '../../components/screen';
 import { Text, TextClickable, Input, MenuItem, Area, MenuTitle, Line } from '../../styles/basics';
 
 export const LoginScreen: React.FC = () => {
-  const context = useContext(Context);
+  const [,setNavigate] = useContext(Context);
 
   return(
     <Screen>
@@ -16,8 +16,8 @@ export const LoginScreen: React.FC = () => {
         <Text>Senha</Text>
         <Input placeholder="123" />
         <Line>
-          <MenuItem styles={{backgroundColor:'green'}} title="Conectar" onPress={() => context.navigate = { containerName: 'Main', screenName: 'Home' }}/>
-          <MenuItem styles={{backgroundColor:'red'}} title="Cadastrar" onPress={() => context.navigate = { containerName: 'Menu', screenName: 'NewAccount' }}/>
+          <MenuItem styles={{backgroundColor:'green'}} title="Conectar" onPress={() => setNavigate({ containerName: 'Main', screenName: 'Home' })}/>
+          <MenuItem styles={{backgroundColor:'red'}} title="Cadastrar" onPress={() => setNavigate({ containerName: 'Menu', screenName: 'NewAccount' })}/>
         </Line>
         <TextClickable onPress={() => alert('teste')} >Clique aqui para recuperar conta</TextClickable>
       </Area>

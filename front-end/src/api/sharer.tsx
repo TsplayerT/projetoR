@@ -1,33 +1,38 @@
-import React, { createContext, ReactElement, ReactNode, useEffect } from 'react';
-import { userMaster } from './data/userConnected';
-import { User } from '../types';
+import React, { createContext, ReactElement, ReactNode, useEffect, useState } from 'react';
+// import { User } from '../types';
+// import { userMaster } from './data/userConnected';
 import { Navigate, NavigateParam } from '../components/switchNavigator';
 
 type Param = {
   children: ReactNode;
 };
-type State = {
-  userConnected?: User;
-  navigate?: NavigateParam;
-};
+// type State = {
+//   userConnected?: User;
+//   navigate?: NavigateParam;
+// };
+type ContextValueType = [NavigateParam | undefined, React.Dispatch<React.SetStateAction<NavigateParam | undefined>>];
 
-const state: State = {
-  userConnected: userMaster
-};
+// const state: State = {
+//   userConnected: userMaster
+// };
 
-export const Context = createContext(state);
+const contextValueDefault: ContextValueType = {} as ContextValueType;
+
+export const Context = createContext(contextValueDefault);
 
 export const Provider: (param: Param) => ReactElement = (param: Param) => {
+  const [navigate, setNavigate] = useState<NavigateParam>();
+  
   useEffect(() => {
-    alert('containerName: ' + state?.navigate?.containerName + ' | screenName: ' + state?.navigate?.screenName);
+    console.log('containerName: ' + navigate?.containerName + ' | screenName: ' + navigate?.screenName);
 
-    if(state?.navigate) {
-      Navigate(state.navigate);
+    if(navigate != undefined) {
+      Navigate(navigate);
     }
-  }, [state?.navigate]);
+  }, [navigate]);
 
   return(
-    <Context.Provider value={state}>
+    <Context.Provider value={[navigate, setNavigate]}>
       { param.children }
     </Context.Provider>
   );
