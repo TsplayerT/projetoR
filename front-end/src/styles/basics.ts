@@ -69,7 +69,7 @@ export const TextClickable = styled.Text`
   margin-top: 30px;
   border: 1px solid black;
 
-  :hover {
+  &:hover {
     transform: scale(1.15);
     cursor: pointer;
     color: lightgray;
@@ -83,18 +83,18 @@ export const Input = styled.TextInput`
 `;
 
 export const SafeInputButton = styled.View`
-  background-color: ${ColorMediumGray}
+  background-color: ${ColorMediumGray};
 `;
 
-export const Box = styled.View`
-  width: 80px;
-  height: 80px;
+export const Box = styled.TouchableOpacity`
+  width: 40px;
+  height: 40px;
   border-radius: 10px;
-  align-items: center;
+  align-items: 'center';
   justify-content: center;
   background-color: ${ColorMediumGray};
 
-  :hover {
+  &:hover {
     cursor: pointer;
   }
 `;

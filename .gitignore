@@ -17,3 +17,5 @@
 /front-end/*.mobileprovision
 /front-end/*.orig.*
 /front-end/package-lock.json
+/front-end/assets
+/front-end/.expo

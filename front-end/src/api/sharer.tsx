@@ -1,38 +1,50 @@
 import React, { createContext, ReactElement, ReactNode, useEffect, useState } from 'react';
-// import { User } from '../types';
-// import { userMaster } from './data/userConnected';
+import { User } from '../types';
 import { Navigate, NavigateParam } from '../components/switchNavigator';
 
 type Param = {
   children: ReactNode;
 };
-// type State = {
-//   userConnected?: User;
-//   navigate?: NavigateParam;
-// };
-type ContextValueType = [NavigateParam | undefined, React.Dispatch<React.SetStateAction<NavigateParam | undefined>>];
+type State = {
+  userConnected?: User;
+  navigate?: NavigateParam;
+};
+type ContextValueType = [State | undefined, React.Dispatch<React.SetStateAction<State | undefined>>];
 
-// const state: State = {
-//   userConnected: userMaster
-// };
+const contextValueDefault = {} as ContextValueType;
 
-const contextValueDefault: ContextValueType = {} as ContextValueType;
+export let ChangeNavigation: (container: string, screen: string) => void;
 
 export const Context = createContext(contextValueDefault);
 
 export const Provider: (param: Param) => ReactElement = (param: Param) => {
-  const [navigate, setNavigate] = useState<NavigateParam>();
+  const [state, setState] = useState<State>();
   
   useEffect(() => {
-    console.log('containerName: ' + navigate?.containerName + ' | screenName: ' + navigate?.screenName);
+    console.log('containerName: ' + state?.navigate?.containerName + ' | screenName: ' + state?.navigate?.screenName);
 
-    if(navigate != undefined) {
-      Navigate(navigate);
+    if (!state && (!process.env.NODE_ENV || process.env.NODE_ENV === 'development')) {
+      Navigate({containerName: 'Main', screenName: 'Settings'});
+      return;
     }
-  }, [navigate]);
+
+    Navigate(state?.navigate);
+  }, [state]);
+
+  ChangeNavigation = (containerName: string, screenName: string) => {
+    const newState = {
+      userConnected: state?.userConnected,
+      navigate: {
+        containerName: containerName,
+        screenName: screenName
+      }
+    };
+
+    setState(newState);
+  };
 
   return(
-    <Context.Provider value={[navigate, setNavigate]}>
+    <Context.Provider value={[state, setState]}>
       { param.children }
     </Context.Provider>
   );

@@ -5,15 +5,21 @@ import { LineSimple, Box, Text } from '../styles/basics';
 type Param = {
   title: string;
   value?: boolean;
-  key?: number;
 };
 
 const Index: (param: Param) => ReactElement = (param: Param) => {
   const [checked, setChecked] = useState(param.value ?? false);
 
+  const action = () => {
+    console.log(`trocando valor de ${checked} para ${!checked}`);
+    setChecked(!checked);
+  };
+
   return (
-    <LineSimple key={param.key} >
-      <Box onPress={() => setChecked(!checked)} >{ checked.toString() }</Box>
+    <LineSimple>
+      <Box onPress={action}>
+        <Text>{ checked.toString() }</Text>        
+      </Box>
       <Text>{param.title}</Text>
     </LineSimple>    
   );

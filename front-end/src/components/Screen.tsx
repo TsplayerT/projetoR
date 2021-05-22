@@ -1,11 +1,15 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 
 import { ScreenArea, ScreenScroller } from '../styles/basics';
 
-const Index: ({ children }: { children: unknown }) => ReactElement = ({ children }: { children: unknown }) => (
+type Param = {
+  children: ReactNode;
+};
+
+const Index: (param: Param) => ReactElement = (param: Param) => (
   <ScreenScroller>
     <ScreenArea>
-      { children }
+      { param.children }
     </ScreenArea>
   </ScreenScroller>
 );

@@ -29,10 +29,10 @@ export type NavigateParam = {
   containerName: string,
   screenName: string
 };
-export const Navigate: (param: NavigateParam) => void = (param: NavigateParam) => {
-  if(param){
-    navigationReference.current?.navigate(param.containerName, {
-      screen: param.screenName
+export const Navigate: (navigate: NavigateParam | undefined) => void = (navigate: NavigateParam | undefined) => {
+  if(navigate != null && navigate != undefined){
+    navigationReference.current?.navigate(navigate.containerName, {
+      screen: navigate.screenName
     });
   }
 };
