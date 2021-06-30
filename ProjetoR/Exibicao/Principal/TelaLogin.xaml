@@ -1,0 +1,25 @@
+﻿<abstrato:Pagina
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:abstrato="clr-namespace:ProjetoR.Contrato.Abstrato"
+    x:Class="ProjetoR.Controlador.Principal.TelaLogin">
+    
+    <StackLayout 
+        Padding="10, 0, 10, 0" 
+        VerticalOptions="Center">
+
+        <Entry
+            x:Name="EntradaIdentificador"
+            Placeholder="Identificador"
+            Text=""/>
+        <Entry
+            x:Name="EntradaSenha"
+            Placeholder="Senha"
+            Text=""
+            IsPassword="True"/>
+        <Button 
+            VerticalOptions="Center" 
+            Text="Conectar" 
+            Command="{Binding ComandoBotaoConectar}"/>
+    </StackLayout>
+</abstrato:Pagina>

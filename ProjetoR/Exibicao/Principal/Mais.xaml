@@ -1,0 +1,35 @@
+﻿<abstrato:Pagina
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:abstrato="clr-namespace:ProjetoR.Contrato.Abstrato"
+    x:Class="ProjetoR.Controlador.Principal.Mais">
+
+    <StackLayout 
+        Spacing="10" 
+        Padding="15">
+        
+        <Image
+            Margin="20, 30, 20, 30"
+            Aspect="AspectFit"
+            Source="{Binding EnderecoLogo}"/>
+
+        <Button 
+            Text="Configurações do App"
+            Command="{Binding ComandoBotaoConfiguracaoApp}"/>
+        <Button 
+            Text="Notas de Atualização"
+            Command="{Binding ComandoBotaoNotaAtualizacao}"/>
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span
+                        Text="Status: "
+                        TextColor="Black"/>
+                    <Span
+                        Text="Estável"
+                        TextColor="Green"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+</abstrato:Pagina>

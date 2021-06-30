@@ -1,0 +1,14 @@
+﻿<abstrato:Pagina
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:abstrato="clr-namespace:ProjetoR.Contrato.Abstrato"
+    x:Class="ProjetoR.Controlador.Mestre.Arsenal">
+
+    <StackLayout 
+        Spacing="10" 
+        Padding="15">
+
+        <Label
+            Text="Arsenal"/>
+    </StackLayout>
+</abstrato:Pagina>
